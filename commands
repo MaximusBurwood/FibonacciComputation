@@ -1,0 +1,3 @@
+nasm -f elf64 -o fib.o fib.asm
+gcc -no-pie -nostartfiles -o fib fib.o -lc -dynamic-linker /lib64/ld-linux-x86-64.so.2
+./fib
